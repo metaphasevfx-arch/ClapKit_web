@@ -4,64 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Поддержка — ClapKit</title>
-    <meta name="description" content="Официальная поддержка приложения ClapKit." />
+    <meta
+      name="description"
+      content="Официальная поддержка приложения ClapKit. Связь через Telegram-бота."
+    />
     <link rel="icon" type="image/png" href="./assets/logo.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="coral-theme support-page">
-    <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
-    <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
-
+  <body class="simple-page">
     <header class="site-header container">
       <a href="./index.html" class="brand">
-        <img src="./assets/web/13.png" alt="ClapKit" />
+        <img src="./assets/logo.png" alt="ClapKit" />
+        <span>ClapKit</span>
       </a>
       <nav class="top-nav">
-        <a href="./index.html" data-i18n="support.nav.home">Главная</a>
-        <a href="./privacy.html" data-i18n="support.nav.privacy">Политика</a>
-        <div class="lang-switch" role="group" aria-label="Language switch">
-          <button class="lang-btn" data-lang="ru">RU</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-        </div>
+        <a href="./index.html">Главная</a>
+        <a href="./privacy.html">Политика</a>
       </nav>
     </header>
 
-    <main class="container support-layout">
-      <section class="support-visual glass">
-        <img src="./assets/web/4.png" alt="shape" class="support-shape" />
-        <img src="./assets/web/2.png" alt="ClapKit mark" class="support-mark" />
-      </section>
+    <main class="container simple-card">
+      <h1>Поддержка ClapKit</h1>
+      <p>Если есть вопрос по работе приложения, напишите нам удобным способом ниже.</p>
 
-      <section class="support-content glass">
-        <h1 data-i18n="support.title">Вопросы?</h1>
-        <p data-i18n="support.lead">
-          Если нужна помощь по приложению, есть баг или идея по улучшению, напишите нам.
-        </p>
-
-        <div class="support-box">
-          <h2 data-i18n="support.tgTitle">Telegram</h2>
+      <ul class="support-list">
+        <li>
+          Telegram-бот:
           <a href="https://t.me/clapkit_support_bot" target="_blank" rel="noreferrer">@clapkit_support_bot</a>
-        </div>
-
-        <div class="support-box">
-          <h2 data-i18n="support.mailTitle">Email</h2>
-          <a href="mailto:metaphase.vfx@gmail.com">metaphase.vfx@gmail.com</a>
-        </div>
-
-        <div class="support-box hint">
-          <h2 data-i18n="support.fastTitle">Чтобы помочь быстрее</h2>
-          <p data-i18n="support.fastText">
-            Приложите версию iOS, версию ClapKit и короткое видео/скрин проблемы.
-          </p>
-        </div>
-      </section>
+        </li>
+        <li>
+          Быстрый ответ по багам: приложите версию iOS, версию ClapKit и короткое видео/скрин проблемы.
+        </li>
+        <li>
+          Для предложений по улучшению: опишите ваш рабочий сценарий (как ведёте смену и где теряется время).
+        </li>
+      </ul>
     </main>
 
     <footer class="site-footer container">
       <p>© <span id="year"></span> ClapKit</p>
       <div>
-        <a href="./index.html" data-i18n="support.footer.home">Главная</a>
-        <a href="./privacy.html" data-i18n="support.footer.privacy">Политика конфиденциальности</a>
+        <a href="./index.html">Главная</a>
+        <a href="./privacy.html">Политика конфиденциальности</a>
       </div>
     </footer>
 

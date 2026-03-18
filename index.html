@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ClapKit — Монтажки в твоем телефоне</title>
+    <title>ClapKit — Съёмочный репорт без переписывания в Excel</title>
     <meta
       name="description"
       content="ClapKit — мобильный журнал съёмки: сцены, кадры, дубли, таймер, заметки, экспорт CSV/XLSX и перенос проекта через .clap."
@@ -17,17 +17,18 @@
     <link rel="icon" type="image/png" href="./assets/logo.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="coral-theme">
-    <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
-    <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+  <body class="site-coral">
+    <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
 
     <header class="site-header container">
       <a href="./index.html" class="brand">
-        <img src="./assets/web/13.png" alt="ClapKit" />
+        <img src="./assets/logo.png" alt="ClapKit" />
+        <span>ClapKit</span>
       </a>
       <nav class="top-nav">
         <a href="#features" data-i18n="menu.features">Функции</a>
-        <a href="#benefits" data-i18n="menu.benefits">Преимущества</a>
+        <a href="#workflow" data-i18n="menu.workflow">Как работает</a>
         <a href="./privacy.html" data-i18n="menu.privacy">Политика</a>
         <a href="./support.html" data-i18n="menu.support">Поддержка</a>
         <div class="lang-switch" role="group" aria-label="Language switch">
@@ -39,99 +40,106 @@
 
     <main>
       <section class="hero container">
-        <div class="hero-card glass">
-          <p class="overline" data-i18n="hero.overline">Создано Феодором Лебедевым</p>
-          <h1 data-i18n="hero.title">Монтажки в твоем телефоне</h1>
-          <p class="hero-lead" data-i18n="hero.lead">
-            Веди сцену, кадры и дубли в реальном времени. Без бумажных листов и без
-            переписывания в Excel после смены.
+        <div class="hero-copy">
+          <img src="./assets/web/14.png" alt="" class="hero-mark" aria-hidden="true" />
+          <p class="eyebrow" data-i18n="hero.eyebrow">Для реальной съёмочной площадки</p>
+          <h1 data-i18n="hero.title">Репорт съёмки без бумажных листов и ночного Excel</h1>
+          <p class="lead" data-i18n="hero.lead">
+            Создавай проекты, фиксируй дубли, веди заметки и экспортируй отчёт сразу после смены.
+            Всё аккуратно, быстро и по делу.
           </p>
-          <div class="hero-actions">
-            <a
-              class="btn btn-primary"
-              href="https://apps.apple.com/us/app/clapkit/id6759739282"
-              target="_blank"
-              rel="noreferrer"
-              data-i18n="hero.download"
-              >Download</a
-            >
-            <a class="btn btn-ghost" href="./support.html" data-i18n="hero.contact">Связаться</a>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://apps.apple.com/us/app/clapkit/id6759739282" target="_blank" rel="noreferrer" data-i18n="hero.appstore">Открыть в App Store</a>
+            <a class="btn btn-ghost" href="./support.html" data-i18n="hero.support">Связаться с поддержкой</a>
           </div>
-        </div>
-
-        <div class="hero-art">
-          <img src="./assets/web/2.png" alt="ClapKit mark" class="mark mark-left" />
-          <img src="./assets/web/15.png" alt="ClapKit app screens" class="phones-main" />
-          <img src="./assets/web/1.png" alt="Hand with phone" class="hand hand-top" />
-        </div>
-      </section>
-
-      <section class="tagline container">
-        <h2 data-i18n="tagline.title">Монтажные листы без бумаги. Всё под контролем.</h2>
-      </section>
-
-      <section id="features" class="container section-block">
-        <div class="feature-grid">
-          <article class="feature-card glass">
-            <h3 data-i18n="f1.title">Устали от бумажных монтажных листов?</h3>
-            <p data-i18n="f1.text">
-              Фиксируйте сцены, кадры и дубли в реальном времени. ClapKit заменяет бумагу и таблицы.
-            </p>
-          </article>
-          <article class="feature-card glass">
-            <h3 data-i18n="f2.title">Создано для съемочной площадки</h3>
-            <p data-i18n="f2.text">
-              Сцены, кадры, дубли, таймер, техпараметры и заметки в одном рабочем потоке.
-            </p>
-          </article>
-          <article class="feature-card glass">
-            <h3 data-i18n="f3.title">От площадки до поста</h3>
-            <p data-i18n="f3.text">
-              Экспортируйте отчёты в CSV/XLSX или передавайте проект целиком через .clap.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="benefits" class="container section-block split-block">
-        <div class="split-left">
-          <p class="overline" data-i18n="offer.overline">What we offer</p>
-          <h2 data-i18n="offer.title">Всё, что нужно в смене</h2>
-          <ul class="pill-list">
-            <li data-i18n="offer.p1">Scene / Shot / Take flow</li>
-            <li data-i18n="offer.p2">Timer + Notes + Sync/MOS</li>
-            <li data-i18n="offer.p3">MultiCam + Tech Parameters</li>
-            <li data-i18n="offer.p4">CSV / XLSX Export + .clap transfer</li>
+          <ul class="stats" aria-label="ClapKit highlights">
+            <li>
+              <span>01</span>
+              <p data-i18n="stats.one">Сцены, кадры и дубли в едином потоке</p>
+            </li>
+            <li>
+              <span>02</span>
+              <p data-i18n="stats.two">Экспорт в CSV и XLSX</p>
+            </li>
+            <li>
+              <span>03</span>
+              <p data-i18n="stats.three">Передача проекта через .clap</p>
+            </li>
           </ul>
         </div>
-        <div class="split-right">
-          <div class="shape-card glass">
-            <img src="./assets/web/3.png" alt="Hands with phone" class="hands-right" />
+        <div class="hero-preview">
+          <div class="phone-stack">
+            <img src="./assets/screens/projects.png" alt="Экран проектов" class="phone phone-left" />
+            <img src="./assets/screens/workspace.png" alt="Рабочий экран дублей" class="phone phone-center" />
+            <img src="./assets/screens/sync.png" alt="Режим SYNC" class="phone phone-right" />
           </div>
         </div>
       </section>
 
-      <section class="container section-block screenshots">
-        <img src="./assets/web/6.png" alt="Onboarding" class="shot-frame" />
-        <img src="./assets/web/8.png" alt="Workspace" class="shot-frame" />
-        <img src="./assets/web/16.png" alt="Takes list" class="shot-frame" />
+      <section id="features" class="section container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="features.eyebrow">Функции</p>
+          <h2 data-i18n="features.title">Всё, что нужно помощнику режиссёра в смене</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3 data-i18n="f1.title">Структура проекта</h3>
+            <p data-i18n="f1.text">Проект → День → Сцена → Кадр → Дубли. Без хаоса и лишних экранов.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f2.title">Таймер действия</h3>
+            <p data-i18n="f2.text">Точное измерение хронометража прямо на рабочем экране с привязкой к дублю.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f3.title">Статусы дубля</h3>
+            <p data-i18n="f3.text">DAY/NIGHT, INT/EXT, SYNC/MOS, PickUp и заметки с быстрыми тегами.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f4.title">Техпараметры камеры</h3>
+            <p data-i18n="f4.text">Lens, FPS, Shutter, ISO, WB + расширенные параметры с сохранением последних значений.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f5.title">MultiCam</h3>
+            <p data-i18n="f5.text">До 12 камер в проекте, отдельные roll/file и техпараметры для каждой камеры.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f6.title">Экспорт и перенос</h3>
+            <p data-i18n="f6.text">Готовый отчёт в CSV/XLSX и перенос проекта между устройствами через .clap.</p>
+          </article>
+        </div>
       </section>
 
-      <section class="container section-block contact-block glass">
-        <div class="contact-logo-wrap">
-          <img src="./assets/web/4.png" alt="ClapKit shape" class="shape-tile" />
-          <img src="./assets/web/2.png" alt="ClapKit mark" class="contact-mark" />
+      <section id="workflow" class="section container workflow">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="workflow.eyebrow">Как это выглядит в смене</p>
+          <h2 data-i18n="workflow.title">4 шага от первого кадра до готового отчёта</h2>
         </div>
-        <div class="contact-copy">
-          <h2 data-i18n="contact.title">Вопросы?</h2>
-          <p data-i18n="contact.text">Напишите нам, если нужна помощь, есть баг или идея по улучшению.</p>
-          <div class="contact-links">
-            <a href="https://t.me/clapkit_support_bot" target="_blank" rel="noreferrer"
-              >t.me/clapkit_support_bot</a
-            >
-            <a href="mailto:metaphase.vfx@gmail.com">metaphase.vfx@gmail.com</a>
-          </div>
-        </div>
+        <ol class="steps">
+          <li>
+            <h3 data-i18n="w1.title">Создай проект</h3>
+            <p data-i18n="w1.text">Добавь базовую информацию и дефолтные параметры камеры.</p>
+          </li>
+          <li>
+            <h3 data-i18n="w2.title">Веди дубли в рабочем окне</h3>
+            <p data-i18n="w2.text">Таймер, статусы, заметки и техданные фиксируются сразу в процессе съёмки.</p>
+          </li>
+          <li>
+            <h3 data-i18n="w3.title">Сохраняй без рутины</h3>
+            <p data-i18n="w3.text">Take автоинкремент, перенос нужных параметров и чистая структура данных.</p>
+          </li>
+          <li>
+            <h3 data-i18n="w4.title">Экспортируй в конце смены</h3>
+            <p data-i18n="w4.text">Получи готовые таблицы и отправь команде без ручного переписывания.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section container cta-band">
+        <h2 data-i18n="final.title">ClapKit помогает держать смену под контролем</h2>
+        <p data-i18n="final.text">
+          Меньше ручного ввода, меньше ошибок, больше времени на реальную работу на площадке.
+        </p>
+        <a class="btn btn-primary" href="https://t.me/clapkit_support_bot" target="_blank" rel="noreferrer" data-i18n="final.button">Написать в поддержку</a>
       </section>
     </main>
 
