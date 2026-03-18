@@ -32,7 +32,7 @@ body {
 }
 
 html {
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
+  background: var(--bg-bottom);
 }
 
 body {
@@ -41,6 +41,16 @@ body {
   line-height: 1.45;
   color: var(--text);
   background: transparent;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
 }
 
 .site-coral {
