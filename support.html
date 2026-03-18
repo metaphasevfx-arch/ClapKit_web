@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Поддержка — ClapKit</title>
+    <title data-i18n="support.pageTitle">Support — ClapKit</title>
     <meta
       name="description"
-      content="Официальная поддержка приложения ClapKit. Связь по email."
+      content="Official support for the ClapKit app. Contact us via email."
+      data-i18n-content="support.metaDescription"
     />
     <link rel="icon" type="image/png" href="./assets/logo-64.png" />
     <link rel="stylesheet" href="./styles.css" />
@@ -26,25 +27,29 @@
         <span>ClapKit</span>
       </a>
       <nav class="top-nav">
-        <a href="./index.html">Главная</a>
-        <a href="./privacy.html">Политика</a>
+        <a href="./index.html" data-i18n="menu.home">Home</a>
+        <a href="./privacy.html" data-i18n="menu.privacy">Privacy</a>
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
       </nav>
     </header>
 
     <main class="container simple-card">
-      <h1>Поддержка ClapKit</h1>
-      <p>Если есть вопрос по работе приложения, напишите нам удобным способом ниже.</p>
+      <h1 data-i18n="support.title">ClapKit Support</h1>
+      <p data-i18n="support.lead">If you have a question about the app, contact us using the option below.</p>
 
       <ul class="support-list">
         <li>
-          Email:
+          <span data-i18n="support.emailLabel">Email:</span>
           <a href="mailto:clapkit.pro@gmail.com?subject=ClapKit%20Support">clapkit.pro@gmail.com</a>
         </li>
         <li>
-          Быстрый ответ по багам: приложите версию iOS, версию ClapKit и короткое видео/скрин проблемы.
+          <span data-i18n="support.bugHint">For faster bug help, include your iOS version, ClapKit version, and a short video/screenshot.</span>
         </li>
         <li>
-          Для предложений по улучшению: опишите ваш рабочий сценарий (как ведёте смену и где теряется время).
+          <span data-i18n="support.ideaHint">For feature requests, describe your real on-set workflow and where you lose time.</span>
         </li>
       </ul>
     </main>
@@ -52,8 +57,8 @@
     <footer class="site-footer container">
       <p>© <span id="year"></span> ClapKit</p>
       <div>
-        <a href="./index.html">Главная</a>
-        <a href="./privacy.html">Политика конфиденциальности</a>
+        <a href="./index.html" data-i18n="footer.home">Home</a>
+        <a href="./privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
       </div>
     </footer>
 
