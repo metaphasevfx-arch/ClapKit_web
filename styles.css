@@ -32,7 +32,10 @@ body {
 }
 
 html {
-  background: var(--bg-bottom);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100dvh;
+  background-attachment: fixed;
 }
 
 body {
@@ -40,17 +43,10 @@ body {
   font-family: "Poppins", "SF Pro Text", "Segoe UI", sans-serif;
   line-height: 1.45;
   color: var(--text);
-  background: transparent;
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
   background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100dvh;
+  background-attachment: fixed;
 }
 
 .site-coral {
