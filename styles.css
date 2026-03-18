@@ -28,14 +28,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
-}
-
-html {
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 100dvh;
-  background-attachment: fixed;
 }
 
 body {
@@ -44,9 +36,6 @@ body {
   line-height: 1.45;
   color: var(--text);
   background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 100dvh;
-  background-attachment: fixed;
 }
 
 .site-coral {
