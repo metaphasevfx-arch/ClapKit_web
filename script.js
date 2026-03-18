@@ -102,6 +102,13 @@ const docLang = (lang) => {
     button.classList.toggle("active", button.dataset.lang === locale);
   });
 
+  const heroImage = document.querySelector("[data-hero-image]");
+  if (heroImage) {
+    const ruSrc = heroImage.getAttribute("data-src-ru");
+    const enSrc = heroImage.getAttribute("data-src-en");
+    heroImage.src = locale === "ru" ? ruSrc : enSrc;
+  }
+
   localStorage.setItem("clapkit-site-lang", locale);
 };
 
