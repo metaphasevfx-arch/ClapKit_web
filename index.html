@@ -14,14 +14,23 @@
       content="Монтажные листы, таймер и заметки в одном месте. Без переписывания в Excel после смены."
     />
     <meta property="og:type" content="website" />
-    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <link rel="icon" type="image/png" href="./assets/logo-64.png" />
+    <link rel="preload" as="image" href="./assets/logo-256.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="site-coral">
 
     <header class="site-header container">
       <a href="./index.html" class="brand">
-        <img src="./assets/logo.png" alt="ClapKit" />
+        <img
+          src="./assets/logo-256.png"
+          alt="ClapKit"
+          width="42"
+          height="42"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
         <span>ClapKit</span>
       </a>
       <nav class="top-nav">
