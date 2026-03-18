@@ -187,13 +187,6 @@ body {
   z-index: 1;
 }
 
-.hero-mark {
-  width: 44px;
-  height: auto;
-  margin-bottom: 10px;
-  opacity: 0.88;
-}
-
 .eyebrow {
   margin: 0;
   font-size: 0.8rem;
@@ -298,64 +291,21 @@ h1 {
 
 .hero-preview {
   position: relative;
-  min-height: 540px;
+  min-height: 520px;
 }
 
 .hero-preview::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 8px;
-  width: 260px;
-  height: 260px;
-  border-radius: 30px 70px 26px 68px;
-  background: rgba(210, 221, 246, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  content: none;
 }
 
-.hero-preview::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 20px;
-  width: 150px;
-  height: 150px;
-  background-image: url("./assets/web/2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.84;
-  filter: drop-shadow(0 14px 22px rgba(132, 23, 46, 0.24));
-}
-
-.phone-stack {
+.hero-collage {
   position: relative;
-  min-height: 540px;
-}
-
-.phone {
-  position: absolute;
-  width: 220px;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.56);
-  box-shadow: var(--shadow);
-}
-
-.phone-left {
-  left: 14px;
-  top: 144px;
-  transform: rotate(-5deg);
-}
-
-.phone-center {
-  left: 168px;
-  top: 30px;
-  transform: rotate(1deg);
-}
-
-.phone-right {
-  right: 8px;
-  top: 160px;
-  transform: rotate(5deg);
+  z-index: 1;
+  width: min(100%, 620px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 24px 44px rgba(131, 22, 50, 0.3));
 }
 
 .section {
@@ -553,27 +503,7 @@ h1 {
   }
 
   .hero-preview {
-    min-height: 500px;
-  }
-
-  .phone-stack {
-    min-height: 500px;
-  }
-
-  .phone {
-    width: 188px;
-  }
-
-  .phone-center {
-    left: calc(50% - 94px);
-  }
-
-  .phone-left {
-    left: calc(50% - 230px);
-  }
-
-  .phone-right {
-    right: calc(50% - 230px);
+    min-height: auto;
   }
 
   .feature-grid {
@@ -628,31 +558,7 @@ h1 {
   }
 
   .hero-preview {
-    min-height: 400px;
-  }
-
-  .phone-stack {
-    min-height: 400px;
-  }
-
-  .phone {
-    width: 152px;
-    border-radius: 20px;
-  }
-
-  .phone-center {
-    left: calc(50% - 76px);
-    top: 14px;
-  }
-
-  .phone-left {
-    left: calc(50% - 184px);
-    top: 82px;
-  }
-
-  .phone-right {
-    right: calc(50% - 184px);
-    top: 88px;
+    min-height: auto;
   }
 
   .cta-band {
