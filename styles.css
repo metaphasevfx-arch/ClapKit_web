@@ -28,6 +28,11 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+}
+
+html {
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
 }
 
 body {
@@ -35,7 +40,7 @@ body {
   font-family: "Poppins", "SF Pro Text", "Segoe UI", sans-serif;
   line-height: 1.45;
   color: var(--text);
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
+  background: transparent;
 }
 
 .site-coral {
