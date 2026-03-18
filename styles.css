@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --bg-top: #ff6767;
+  --bg-top: #ffd1d1;
   --bg-mid: #ff9b9b;
-  --bg-bottom: #ffd1d1;
+  --bg-bottom: #ff6767;
   --surface: rgba(255, 255, 255, 0.18);
   --surface-strong: rgba(255, 255, 255, 0.24);
   --surface-soft: rgba(255, 255, 255, 0.12);
