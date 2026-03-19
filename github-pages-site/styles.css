@@ -162,7 +162,7 @@ body > * {
 
 .hero-copy {
   position: relative;
-  border-radius: 44px 44px 124px 44px;
+  border-radius: 44px;
   border: 1px solid var(--line);
   background: linear-gradient(150deg, var(--surface-strong), var(--surface));
   backdrop-filter: blur(10px);
@@ -635,7 +635,7 @@ h1 {
 
   .hero-copy {
     padding: 22px 18px;
-    border-radius: 30px 30px 90px 30px;
+    border-radius: 30px;
   }
 
   h1 {

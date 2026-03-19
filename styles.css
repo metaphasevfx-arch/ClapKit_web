@@ -29,11 +29,15 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background-color: var(--bg-top);
+  overscroll-behavior-y: contain;
 }
 
 html {
-  background: linear-gradient(180deg, var(--bg-bottom) 0%, var(--bg-mid) 34%, var(--bg-top) 100%);
+  height: 100%;
+  background-color: var(--bg-top);
+  background-image: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 42%, var(--bg-bottom) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 body {
@@ -46,15 +50,16 @@ body {
   z-index: 0;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+  -webkit-overflow-scrolling: touch;
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 42%, var(--bg-bottom) 100%);
 }
 
 body > * {
@@ -157,7 +162,7 @@ body > * {
 
 .hero-copy {
   position: relative;
-  border-radius: 44px 44px 124px 44px;
+  border-radius: 44px;
   border: 1px solid var(--line);
   background: linear-gradient(150deg, var(--surface-strong), var(--surface));
   backdrop-filter: blur(10px);
@@ -296,6 +301,40 @@ h1 {
   padding: 56px 0 14px;
 }
 
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.video-block {
+  padding-top: 32px;
+}
+
+.video-card {
+  margin-top: 22px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.video-card video {
+  width: 100%;
+  max-height: 520px;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.video-card p {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
 .section-head {
   max-width: 740px;
 }
@@ -385,6 +424,27 @@ h1 {
   box-shadow: var(--shadow);
 }
 
+.long-copy {
+  margin-top: 16px;
+}
+
+.copy-stack {
+  margin-top: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.copy-stack p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
 .cta-band h2 {
   font-size: clamp(1.65rem, 3.5vw, 2.6rem);
   font-weight: 600;
@@ -435,6 +495,59 @@ h1 {
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
   padding: 28px;
+}
+
+.simple-card .eyebrow {
+  margin-bottom: 6px;
+}
+
+.simple-card .article-meta {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  color: var(--text-dim);
+}
+
+.simple-card .article-body {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.simple-card .article-body p,
+.simple-card .article-body li {
+  color: var(--text-muted);
+}
+
+.simple-card .article-body ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.link-grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.link-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 14px;
+  font-weight: 600;
+}
+
+.link-card span {
+  display: block;
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .simple-card h1 {
@@ -499,6 +612,10 @@ h1 {
   .workflow .steps {
     grid-template-columns: 1fr;
   }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -518,7 +635,7 @@ h1 {
 
   .hero-copy {
     padding: 22px 18px;
-    border-radius: 30px 30px 90px 30px;
+    border-radius: 30px;
   }
 
   h1 {
