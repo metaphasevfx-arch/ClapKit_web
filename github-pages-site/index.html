@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#FFD1D1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>ClapKit — Script Supervisor App for Film Production</title>
+    <meta
+      name="description"
+      content="ClapKit is a mobile app for assistant directors and script supervisors. Track scenes, takes, cameras and export shooting reports instantly."
+    />
+    <meta
+      name="keywords"
+      content="script supervisor app, shooting report app, assistant director tools, film production report, on-set logging, set report, camera log, excel shooting report"
+    />
+    <link rel="canonical" href="https://clapkit.pro/" />
+
+    <meta property="og:title" content="ClapKit — Script Supervisor App" />
+    <meta property="og:description" content="Track scenes, takes and export reports instantly" />
+    <meta property="og:image" content="https://clapkit.pro/preview.png" />
+    <meta property="og:url" content="https://clapkit.pro" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ClapKit — Script Supervisor App" />
+    <meta name="twitter:description" content="Track scenes, takes and export reports instantly" />
+    <meta name="twitter:image" content="https://clapkit.pro/preview.png" />
+
+    <link rel="icon" type="image/png" href="./assets/logo-64.png" />
+    <link rel="preload" as="image" href="./assets/logo-256.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="site-coral">
+    <header class="site-header container">
+      <a href="./" class="brand" data-lang-link>
+        <img
+          src="./assets/logo-256.png"
+          alt="ClapKit"
+          width="42"
+          height="42"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <span>ClapKit</span>
+      </a>
+      <nav class="top-nav">
+        <a href="#features" data-i18n="menu.features">Features</a>
+        <a href="#workflow" data-i18n="menu.workflow">Workflow</a>
+        <a href="#use-cases" data-i18n="menu.useCases">Use Cases</a>
+        <a href="./blog" data-lang-link data-i18n="menu.blog">Blog</a>
+        <a href="./privacy" data-lang-link data-i18n="menu.privacy">Privacy</a>
+        <a href="./support" data-lang-link data-i18n="menu.support">Support</a>
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Built for real shooting days</p>
+          <h1 data-i18n="hero.title">ClapKit — script supervisor &amp; AD report app</h1>
+          <p class="lead" data-i18n="hero.lead">
+            Track scenes, takes, cameras and notes on set — export ready-to-use reports without Excel.
+          </p>
+          <div class="cta-row">
+            <a
+              class="btn btn-primary"
+              href="https://apps.apple.com/us/app/clapkit/id6759739282"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="hero.appstore"
+              >Open in App Store</a
+            >
+            <a class="btn btn-ghost" href="./support" data-lang-link data-i18n="hero.support">Contact Support</a>
+          </div>
+          <ul class="stats" aria-label="ClapKit highlights">
+            <li>
+              <span>01</span>
+              <p data-i18n="stats.one">Scenes / takes logging</p>
+            </li>
+            <li>
+              <span>02</span>
+              <p data-i18n="stats.two">CSV / XLSX export</p>
+            </li>
+            <li>
+              <span>03</span>
+              <p data-i18n="stats.three">Project transfer via .clap</p>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-preview">
+          <img
+            src="./assets/web/Phones_EN.png"
+            alt="ClapKit app preview"
+            class="hero-collage"
+            data-hero-image
+            data-src-ru="./assets/web/Phones_RU.png"
+            data-src-en="./assets/web/Phones_EN.png"
+          />
+        </div>
+      </section>
+
+      <section class="section container video-block">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="video.eyebrow">Hero Demo</p>
+          <h2 data-i18n="video.title">Scene → Take → Note → Export</h2>
+        </div>
+        <div class="video-card">
+          <video controls playsinline muted loop preload="metadata" poster="./assets/web/Phones_EN.png">
+            <source src="./assets/demo/hero-demo.mp4" type="video/mp4" />
+          </video>
+          <p data-i18n="video.caption">10–15 sec demo flow from on-set logging to ready report export.</p>
+        </div>
+      </section>
+
+      <section class="section container split" id="problem-solution">
+        <article class="feature-card">
+          <h2 data-i18n="problem.title">Stop rewriting shooting reports after set</h2>
+          <p data-i18n="problem.text">
+            Paper logs and late-night spreadsheet rewrite create mistakes, lost takes, and delays for post production.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h2 data-i18n="solution.title">Log everything on set → export instantly</h2>
+          <p data-i18n="solution.text">
+            ClapKit captures structured production data in real time, so your film production report is ready at wrap.
+          </p>
+        </article>
+      </section>
+
+      <section id="features" class="section container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="features.eyebrow">Features</p>
+          <h2 data-i18n="features.title">On-set logging tools built for real production speed</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3 data-i18n="f1.title">Scenes / Takes Logging</h3>
+            <p data-i18n="f1.text">Project → Day → Scene → Shot → Takes with clean structure and fast navigation.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f2.title">Multi-Cam</h3>
+            <p data-i18n="f2.text">Work with multiple cameras and keep separate roll/file + technical values for each one.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f3.title">Notes + Timer</h3>
+            <p data-i18n="f3.text">Capture notes, tags, and action duration on one workspace screen during shooting.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f4.title">Camera Settings</h3>
+            <p data-i18n="f4.text">Lens, FPS, Shutter, ISO, WB and extended camera parameters with value carry-over.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f5.title">Shooting Modes</h3>
+            <p data-i18n="f5.text">DAY/NIGHT, INT/EXT, SYNC/MOS, PickUp and fast status handling for each take.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="f6.title">Export Ready</h3>
+            <p data-i18n="f6.text">Generate CSV/XLSX output built for production teams right after wrap.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="workflow">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="workflow.eyebrow">Workflow</p>
+          <h2 data-i18n="workflow.title">How ClapKit works on set</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3 data-i18n="w1.title">Create project and shooting day</h3>
+            <p data-i18n="w1.text">Set the project structure once and start logging scenes and takes immediately.</p>
+          </li>
+          <li>
+            <h3 data-i18n="w2.title">Capture takes in real time</h3>
+            <p data-i18n="w2.text">Use the timer, states, notes and camera values while action is happening.</p>
+          </li>
+          <li>
+            <h3 data-i18n="w3.title">Keep clean structured data</h3>
+            <p data-i18n="w3.text">Take auto-increment and carry-over remove repetitive input and reduce mistakes.</p>
+          </li>
+          <li>
+            <h3 data-i18n="w4.title">Export film production report</h3>
+            <p data-i18n="w4.text">Share ready CSV/XLSX reports with production and post with zero manual rewrite.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="use-cases" class="section container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="cases.eyebrow">Use Cases</p>
+          <h2 data-i18n="cases.title">Built for assistant directors, script supervisors and small crews</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3 data-i18n="cases.ad.title">Assistant Directors</h3>
+            <p data-i18n="cases.ad.text">Fast on-set logging and reliable end-of-day reporting for production control.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="cases.script.title">Script Supervisors</h3>
+            <p data-i18n="cases.script.text">Track continuity-relevant take metadata and notes with less manual friction.</p>
+          </article>
+          <article class="feature-card">
+            <h3 data-i18n="cases.crew.title">Small Production Crews</h3>
+            <p data-i18n="cases.crew.text">One lightweight shooting report app instead of paper sheets and spreadsheets.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container long-copy" id="seo-copy">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="seo.eyebrow">What is ClapKit</p>
+          <h2 data-i18n="seo.title">A script supervisor app and shooting report app for real set pressure</h2>
+        </div>
+        <div class="copy-stack">
+          <p data-i18n="seo.p1">
+            ClapKit is a script supervisor app built for teams that need clean set data without late-night admin work. On many productions, assistant directors and script supervisors still split their process between paper notes, stopwatch apps, and manual spreadsheets. That workflow wastes time and creates inconsistencies in naming, timing, and take tracking. ClapKit replaces this fragmented approach with one structured interface: project, day, scene, shot, and take. Instead of rewriting reports after wrap, your data is already organized while you shoot.
+          </p>
+          <p data-i18n="seo.p2">
+            As a shooting report app, ClapKit is optimized for speed under pressure. You can log scene and shot values, manage take numbers, capture status flags, and run the timer in real time. Camera details are attached directly to the take, so your report reflects what actually happened on set, not what someone remembered later. This matters when the schedule is tight and departments depend on accurate handoff. The app is designed to reduce repetitive typing and keep focus on filming, not paperwork.
+          </p>
+          <p data-i18n="seo.p3">
+            ClapKit also works as assistant director tools for daily production control. AD teams can review the current day structure, move through scenes and shots quickly, and keep reporting consistent across long shifts. The same workflow supports script teams who need continuity-oriented notes with clear linkage to each take. Whether you shoot single-cam or multicam, the app keeps camera-specific values in order and prevents the common chaos of mixed naming and mismatched file references.
+          </p>
+          <p data-i18n="seo.p4">
+            A strong film production report is valuable only if the data is complete and standardized. ClapKit stores structured entries instead of free-form text blobs, which makes exports cleaner and easier to use by production coordinators, editors, and post teams. At wrap, you can export CSV or XLSX instantly, without rebuilding the report in Excel by hand. If a teammate needs to continue work on another device, transfer the full project with a .clap file and keep the same structure.
+          </p>
+          <p data-i18n="seo.p5">
+            The app keeps the interface practical for long shooting days: large controls, clear hierarchy, and minimal visual noise. Technical camera values, notes, and modes stay close to the take flow, so nothing critical is buried. This on-set logging approach helps teams avoid small mistakes that become expensive later: missing take states, wrong file references, incomplete notes, and inconsistent report formatting. By capturing everything at the moment of action, ClapKit gives production a cleaner operational baseline.
+          </p>
+          <p data-i18n="seo.p6">
+            If your team is searching for a script supervisor app, a shooting report app, or practical assistant director tools that actually fit real set pace, ClapKit is built exactly for that job. It is not a generic spreadsheet shell. It is a focused reporting workflow for film production: fast input, structured storage, ready export, and clear handoff to the next stage. From on-set logging to final report delivery, ClapKit helps keep the day under control.
+          </p>
+        </div>
+      </section>
+
+      <section class="section container cta-band">
+        <h2 data-i18n="final.title">Get ClapKit and simplify your shooting report workflow</h2>
+        <p data-i18n="final.text">
+          Start using structured on-set logging for scenes, takes, cameras and notes — without Excel rewrite.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/clapkit/id6759739282" target="_blank" rel="noreferrer" data-i18n="final.appstore">Download on App Store</a>
+          <a class="btn btn-ghost" href="./support" data-lang-link data-i18n="final.support">Message Support</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© <span id="year"></span> ClapKit</p>
+      <div>
+        <a href="./blog" data-lang-link data-i18n="footer.blog">Blog</a>
+        <a href="./privacy" data-lang-link data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="./terms" data-lang-link data-i18n="footer.terms">Terms</a>
+        <a href="./contact" data-lang-link data-i18n="footer.contact">Contact</a>
+        <a href="./support" data-lang-link data-i18n="footer.support">Support</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
