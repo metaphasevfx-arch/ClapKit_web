@@ -160,7 +160,7 @@
   const submitButton = document.getElementById("survey-submit");
   const storageNode = document.getElementById("survey-storage-mode");
 
-  if (!form || !questionsWrap || !questionsRoot || !statusNode || !submitButton || !storageNode) {
+  if (!form || !questionsWrap || !questionsRoot || !statusNode || !submitButton) {
     return;
   }
 
@@ -197,6 +197,8 @@
   }
 
   function renderStorageMode() {
+    if (!storageNode) return;
+
     const config = getConfig();
     const mode = getMode();
 

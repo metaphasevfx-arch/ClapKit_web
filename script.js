@@ -234,8 +234,8 @@ const i18nExtra = {
 
     "survey.pageTitle": "Опрос цехов — ClapKit",
     "survey.metaDescription": "Анонимный опрос для съёмочных цехов. Помогите нам создать удобные модули под ваш реальный workflow.",
-    "survey.eyebrow": "Анонимный продуктовый опрос",
-    "survey.title": "Помогите нам построить экосистему, которая закрывает боли съёмочной площадки",
+    "survey.eyebrow": "Анонимный опрос",
+    "survey.title": "Помогите нам построить идеальную экосистему для кино",
     "survey.lead": "Укажите, кем вы работаете в кино, и ответьте на практичные вопросы про вашу мобильную рутину. Без почты и регистрации.",
     "survey.privacyNote": "Мы собираем только ответы о рабочем процессе. Не указывайте личные данные и конфиденциальную информацию проекта.",
     "survey.roleLegend": "Ваш цех",
@@ -405,8 +405,8 @@ const i18nExtra = {
 
     "survey.pageTitle": "Crew Survey — ClapKit",
     "survey.metaDescription": "Anonymous survey for film departments. Help us build useful modules for real on-set workflows.",
-    "survey.eyebrow": "Anonymous Product Research",
-    "survey.title": "Help us build an ecosystem that solves real on-set pain",
+    "survey.eyebrow": "Anonymous Survey",
+    "survey.title": "Help us build the ideal ecosystem for film production",
     "survey.lead": "Tell us who you work as in film and answer practical questions about your mobile workflow. No email and no sign-up.",
     "survey.privacyNote": "We collect only workflow answers. Please do not include personal data or confidential production information.",
     "survey.roleLegend": "Your department",
