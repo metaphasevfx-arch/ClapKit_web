@@ -29,7 +29,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  overscroll-behavior-y: none;
+  overscroll-behavior-y: contain;
 }
 
 html {
@@ -54,7 +54,12 @@ body {
 }
 
 body::before {
-  content: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 42%, var(--bg-bottom) 100%);
 }
 
 body > * {
