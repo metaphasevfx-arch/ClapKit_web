@@ -5,12 +5,16 @@ Static site for `clapkit.pro`.
 ## Structure
 
 - `index.html` - landing page
-- `privacy.html` - privacy policy
-- `support.html` - support page
+- `survey/` - anonymous crew workflow survey
+- `privacy/`, `terms/`, `contact/`, `support/` - utility pages
+- `script-supervisor-app/`, `shooting-report-app/`, `on-set-logging/` - SEO pages
+- `blog/` - articles index + posts
 - `styles.css` - shared styles
 - `script.js` - RU/EN switching + footer year
+- `survey-config.js` - survey storage mode config
 - `CNAME` - custom domain (`clapkit.pro`)
 - `assets/` - logo and screenshots
+- `robots.txt`, `sitemap.xml` - crawl/index hints
 
 ## Deploy (GitHub Pages via Actions)
 
@@ -35,6 +39,6 @@ Notes:
 
 ## App Store links
 
-- Support URL: `https://clapkit.pro/support.html`
-- Privacy Policy URL: `https://clapkit.pro/privacy.html`
+- Support URL: `https://clapkit.pro/support`
+- Privacy Policy URL: `https://clapkit.pro/privacy`
 - Marketing URL: `https://clapkit.pro`

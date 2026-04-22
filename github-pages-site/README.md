@@ -5,20 +5,16 @@ Static site for `clapkit.pro`.
 ## Structure
 
 - `index.html` - landing page
-- `privacy/` - privacy policy
-- `terms/` - terms of use
-- `contact/` - contacts page
-- `support/` - support page
-- `script-supervisor-app/` - SEO landing page
-- `shooting-report-app/` - SEO landing page
-- `on-set-logging/` - SEO landing page
+- `survey/` - anonymous crew workflow survey
+- `privacy/`, `terms/`, `contact/`, `support/` - utility pages
+- `script-supervisor-app/`, `shooting-report-app/`, `on-set-logging/` - SEO pages
 - `blog/` - articles index + posts
 - `styles.css` - shared styles
 - `script.js` - RU/EN switching + footer year
+- `survey-config.js` - survey storage mode config
 - `CNAME` - custom domain (`clapkit.pro`)
 - `assets/` - logo and screenshots
-- `robots.txt` - crawl rules
-- `sitemap.xml` - indexed routes list
+- `robots.txt`, `sitemap.xml` - crawl/index hints
 
 ## Deploy (GitHub Pages via Actions)
 

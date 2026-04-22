@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#FFD1D1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title data-i18n="survey.pageTitle">Crew Workflow Survey — ClapKit</title>
+    <meta
+      name="description"
+      content="Anonymous survey for film departments. Help us build better ClapKit modules for your real on-set workflow."
+      data-i18n-content="survey.metaDescription"
+    />
+    <link rel="canonical" href="https://clapkit.pro/survey" />
+    <link rel="icon" type="image/png" href="../assets/logo-64.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="simple-page">
+    <header class="site-header container">
+      <a href="../" class="brand" data-lang-link>
+        <img
+          src="../assets/logo-256.png"
+          alt="ClapKit"
+          width="42"
+          height="42"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <span>ClapKit</span>
+      </a>
+      <nav class="top-nav">
+        <a href="../" data-lang-link data-i18n="menu.home">Home</a>
+        <a href="../blog/" data-lang-link data-i18n="menu.blog">Blog</a>
+        <a href="../privacy/" data-lang-link data-i18n="menu.privacy">Privacy</a>
+        <a href="../support/" data-lang-link data-i18n="menu.support">Support</a>
+        <a href="./" data-lang-link data-i18n="menu.survey">Survey</a>
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container survey-shell">
+      <section class="survey-intro survey-card">
+        <p class="eyebrow" data-i18n="survey.eyebrow">Anonymous Product Research</p>
+        <h1 data-i18n="survey.title">Help us build better modules for each department</h1>
+        <p data-i18n="survey.lead">
+          Tell us who you work as in film, answer practical questions about phone workflow, and submit. No email and no registration.
+        </p>
+        <p class="survey-note" data-i18n="survey.privacyNote">
+          We collect only workflow answers. Do not include personal or confidential production data.
+        </p>
+      </section>
+
+      <section class="survey-card">
+        <form id="crew-survey-form" class="survey-form" novalidate>
+          <div id="survey-questions-wrap" class="survey-section">
+            <h2 class="survey-subtitle" data-i18n="survey.questionsTitle">Questions</h2>
+            <p class="survey-tip" data-i18n="survey.questionsHint">
+              Focus on your phone workflow, bottlenecks, and what tools should be added to ClapKit.
+            </p>
+            <div id="survey-questions" class="survey-questions"></div>
+          </div>
+
+          <div class="survey-actions">
+            <button id="survey-submit" type="submit" class="btn btn-primary" data-i18n="survey.submit">Submit Anonymously</button>
+            <p id="survey-storage-mode" class="survey-storage" aria-live="polite"></p>
+          </div>
+
+          <p id="survey-status" class="survey-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© <span id="year"></span> ClapKit</p>
+      <div>
+        <a href="../" data-lang-link data-i18n="footer.home">Home</a>
+        <a href="../blog/" data-lang-link data-i18n="footer.blog">Blog</a>
+        <a href="../privacy/" data-lang-link data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="../terms/" data-lang-link data-i18n="footer.terms">Terms</a>
+        <a href="../contact/" data-lang-link data-i18n="footer.contact">Contact</a>
+        <a href="./" data-lang-link data-i18n="footer.survey">Survey</a>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../survey-config.js"></script>
+    <script src="./survey.js"></script>
+  </body>
+</html>

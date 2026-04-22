@@ -31,6 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://clapkit.pro/survey</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://clapkit.pro/blog/how-to-write-a-shooting-report</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>

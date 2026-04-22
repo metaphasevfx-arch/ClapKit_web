@@ -4,6 +4,7 @@ const i18n = {
     "menu.features": "Функции",
     "menu.workflow": "Как работает",
     "menu.useCases": "Кому подходит",
+    "menu.survey": "Опрос цехов",
     "menu.blog": "Блог",
     "menu.privacy": "Политика",
     "menu.support": "Поддержка",
@@ -74,7 +75,7 @@ const i18n = {
     "final.title": "Установи ClapKit и упрости workflow съёмочного отчёта",
     "final.text": "Структурированное on-set logging для сцен, дублей, камер и заметок — без ночного Excel.",
     "final.appstore": "Скачать в App Store",
-    "final.support": "Написать в поддержку",
+    "final.support": "Пройти опрос цехов",
 
     "support.pageTitle": "Поддержка — ClapKit",
     "support.metaDescription": "Официальная поддержка ClapKit. Связаться с командой можно по email.",
@@ -108,6 +109,7 @@ const i18n = {
     "footer.privacy": "Политика",
     "footer.terms": "Условия",
     "footer.contact": "Контакты",
+    "footer.survey": "Опрос цехов",
     "footer.support": "Поддержка"
   },
   en: {
@@ -115,6 +117,7 @@ const i18n = {
     "menu.features": "Features",
     "menu.workflow": "Workflow",
     "menu.useCases": "Use Cases",
+    "menu.survey": "Crew Survey",
     "menu.blog": "Blog",
     "menu.privacy": "Privacy",
     "menu.support": "Support",
@@ -185,7 +188,7 @@ const i18n = {
     "final.title": "Get ClapKit and simplify your shooting report workflow",
     "final.text": "Start using structured on-set logging for scenes, takes, cameras and notes — without Excel rewrite.",
     "final.appstore": "Download on App Store",
-    "final.support": "Message Support",
+    "final.support": "Take the Crew Survey",
 
     "support.pageTitle": "Support — ClapKit",
     "support.metaDescription": "Official support for the ClapKit app. Contact us via email.",
@@ -219,6 +222,7 @@ const i18n = {
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms",
     "footer.contact": "Contact",
+    "footer.survey": "Crew Survey",
     "footer.support": "Support"
   }
 };
@@ -227,6 +231,27 @@ const i18nExtra = {
   ru: {
     "home.pageTitle": "ClapKit — приложение для съёмочных отчётов",
     "home.metaDescription": "ClapKit — мобильное приложение для assistant director и script supervisor. Фиксируйте сцены, дубли и камеры, экспортируйте отчёт сразу.",
+
+    "survey.pageTitle": "Опрос цехов — ClapKit",
+    "survey.metaDescription": "Анонимный опрос для съёмочных цехов. Помогите нам создать удобные модули под ваш реальный workflow.",
+    "survey.eyebrow": "Анонимный продуктовый опрос",
+    "survey.title": "Помогите нам построить экосистему, которая закрывает боли съёмочной площадки",
+    "survey.lead": "Укажите, кем вы работаете в кино, и ответьте на практичные вопросы про вашу мобильную рутину. Без почты и регистрации.",
+    "survey.privacyNote": "Мы собираем только ответы о рабочем процессе. Не указывайте личные данные и конфиденциальную информацию проекта.",
+    "survey.roleLegend": "Ваш цех",
+    "survey.role.placeholder": "Выберите цех",
+    "survey.role.scriptSupervisor": "Script Supervisor",
+    "survey.role.assistantDirector": "Assistant Director",
+    "survey.role.propMaster": "Реквизит / Prop Master",
+    "survey.role.camera": "Камерный цех",
+    "survey.role.sound": "Звуковой цех",
+    "survey.role.production": "Продакшен-офис",
+    "survey.role.other": "Other",
+    "survey.otherRoleLabel": "Напишите ваш цех",
+    "survey.otherRolePlaceholder": "Например: Костюмный / Грим",
+    "survey.questionsTitle": "Вопросы",
+    "survey.questionsHint": "Фокус на том, что вы реально делаете в телефоне: рутина, хранение, передача данных и нужные инструменты.",
+    "survey.submit": "Отправить анонимно",
 
     "terms.pageTitle": "Условия использования — ClapKit",
     "terms.metaDescription": "Условия использования ClapKit для сайта и iOS-приложения.",
@@ -377,6 +402,27 @@ const i18nExtra = {
   en: {
     "home.pageTitle": "ClapKit — Script Supervisor App for Film Production",
     "home.metaDescription": "ClapKit is a mobile app for assistant directors and script supervisors. Track scenes, takes, cameras and export shooting reports instantly.",
+
+    "survey.pageTitle": "Crew Survey — ClapKit",
+    "survey.metaDescription": "Anonymous survey for film departments. Help us build useful modules for real on-set workflows.",
+    "survey.eyebrow": "Anonymous Product Research",
+    "survey.title": "Help us build an ecosystem that solves real on-set pain",
+    "survey.lead": "Tell us who you work as in film and answer practical questions about your mobile workflow. No email and no sign-up.",
+    "survey.privacyNote": "We collect only workflow answers. Please do not include personal data or confidential production information.",
+    "survey.roleLegend": "Your department",
+    "survey.role.placeholder": "Select department",
+    "survey.role.scriptSupervisor": "Script Supervisor",
+    "survey.role.assistantDirector": "Assistant Director",
+    "survey.role.propMaster": "Prop Master / Props",
+    "survey.role.camera": "Camera Department",
+    "survey.role.sound": "Sound Department",
+    "survey.role.production": "Production Office",
+    "survey.role.other": "Other",
+    "survey.otherRoleLabel": "Write your department",
+    "survey.otherRolePlaceholder": "Example: Costume / Wardrobe",
+    "survey.questionsTitle": "Questions",
+    "survey.questionsHint": "Focus on what you actually do on your phone: routine, storage, handoff, and missing tools.",
+    "survey.submit": "Submit Anonymously",
 
     "terms.pageTitle": "Terms of Use — ClapKit",
     "terms.metaDescription": "ClapKit terms of use for website and iOS app usage.",
@@ -603,6 +649,13 @@ const applyLanguage = (lang) => {
     }
   });
 
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (dict[key]) {
+      el.setAttribute("placeholder", dict[key]);
+    }
+  });
+
   document.querySelectorAll(".lang-btn").forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === locale);
   });
@@ -617,6 +670,7 @@ const applyLanguage = (lang) => {
   localStorage.setItem(STORAGE_KEY, locale);
   updateInternalLinks(locale);
   updateUrlState(locale);
+  document.dispatchEvent(new CustomEvent("clapkit:languagechange", { detail: { lang: locale } }));
 };
 
 const initLanguage = () => {
