@@ -634,10 +634,7 @@ h1 {
 }
 
 .survey-section {
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.12);
-  padding: 16px;
+  padding: 0;
 }
 
 .survey-label {
@@ -698,19 +695,19 @@ h1 {
 }
 
 .survey-questions {
-  margin-top: 14px;
+  margin-top: 10px;
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .survey-question {
   margin: 0;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  background: transparent;
+  padding: 10px 12px;
   display: grid;
-  gap: 10px;
+  gap: 8px;
   min-width: 0;
 }
 
