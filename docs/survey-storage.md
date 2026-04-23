@@ -60,3 +60,7 @@ order by 2 desc;
 
 ## Alternative setup: webhook
 Set `mode: "webhook"` and `webhookUrl` in `survey-config.js`. The endpoint should accept JSON POST and store payload fields.
+
+## Google Sheets setup
+For Google Sheets via Apps Script, use this guide:
+`docs/google-sheets-webhook.md`

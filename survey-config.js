@@ -9,6 +9,14 @@ window.CK_SURVEY_CONFIG = {
   // supabaseAnonKey: "YOUR_PUBLIC_ANON_KEY",
   // supabaseTable: "department_survey_responses",
 
-  // Webhook endpoint that stores responses on server.
-  webhookUrl: "https://clapkit.pro/api/survey"
+  // Google Apps Script Web App URL:
+  // https://script.google.com/macros/s/XXXXXXXXXXXX/exec
+  webhookUrl: "",
+
+  // For Google Apps Script from browser (Safari/iPhone) use no-cors mode.
+  webhookNoCors: true,
+
+  // Optional shared token. Will be sent as query param ?token=...
+  // Use a long random string and validate it in Apps Script.
+  webhookToken: ""
 };

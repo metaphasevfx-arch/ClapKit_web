@@ -459,16 +459,26 @@
   }
 
   async function storeWebhook(payload, config) {
-    const url = typeof config.webhookUrl === "string" ? config.webhookUrl.trim() : "";
-    if (!url) throw new Error("Webhook URL is missing.");
+    const baseUrl = typeof config.webhookUrl === "string" ? config.webhookUrl.trim() : "";
+    if (!baseUrl) throw new Error("Webhook URL is missing.");
+
+    const token = typeof config.webhookToken === "string" ? config.webhookToken.trim() : "";
+    const useNoCors = config.webhookNoCors === true;
+
+    const url = token
+      ? `${baseUrl}${baseUrl.includes("?") ? "&" : "?"}token=${encodeURIComponent(token)}`
+      : baseUrl;
 
     const response = await fetch(url, {
       method: "POST",
+      mode: useNoCors ? "no-cors" : "cors",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": useNoCors ? "text/plain;charset=utf-8" : "application/json"
       },
       body: JSON.stringify(payload)
     });
+
+    if (useNoCors) return;
 
     if (!response.ok) {
       throw new Error(`Webhook request failed (${response.status}).`);
