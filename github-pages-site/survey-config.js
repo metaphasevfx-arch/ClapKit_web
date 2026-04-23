@@ -11,12 +11,12 @@ window.CK_SURVEY_CONFIG = {
 
   // Google Apps Script Web App URL:
   // https://script.google.com/macros/s/XXXXXXXXXXXX/exec
-  webhookUrl: "",
+  webhookUrl: "https://script.google.com/macros/s/AKfycbyqxO8pgod1vsFgGZ1ZuuoRBxhQ4b1t5pNvCN8IJuGZeTQaxhP3Xzre6I9k8Wkn1YJC/exec",
 
   // For Google Apps Script from browser (Safari/iPhone) use no-cors mode.
   webhookNoCors: true,
 
   // Optional shared token. Will be sent as query param ?token=...
   // Use a long random string and validate it in Apps Script.
-  webhookToken: ""
+  webhookToken: "clapkit_2026_4tY9mQp7VxK2nL8"
 };
