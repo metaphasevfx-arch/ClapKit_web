@@ -344,8 +344,19 @@ h1 {
   margin: 0 auto;
   border-radius: 16px;
   display: block;
-  object-fit: cover;
-  background: rgba(0, 0, 0, 0.14);
+  object-fit: contain;
+  background: #120b10;
+}
+
+.video-card video:fullscreen,
+.video-card video:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0;
+  background: #000;
 }
 
 .video-card p {
