@@ -2,6 +2,12 @@
   "use strict";
 
   const LOCAL_RESULTS_KEY = "clapkit-crew-survey-responses-v1";
+  const SECRET_ROLE_TRIGGER = "tim_roho";
+  const SECRET_REWARD_URL = "https://drive.google.com/file/d/1TF3RKaxgYOTrl5okb9adSmFBhkG_BM2B/view?usp=share_link";
+  const SECRET_REWARD_LABEL = {
+    ru: "то что ты хотел",
+    en: "то что ты хотел"
+  };
 
   const ui = {
     ru: {
@@ -183,12 +189,34 @@
     return "local";
   }
 
-  function setStatus(message, type) {
-    statusNode.textContent = message;
+  function applyStatusType(type) {
     statusNode.classList.remove("is-error", "is-success", "is-info");
     if (type === "error") statusNode.classList.add("is-error");
     if (type === "success") statusNode.classList.add("is-success");
     if (type === "info") statusNode.classList.add("is-info");
+  }
+
+  function setStatus(message, type) {
+    statusNode.textContent = message;
+    applyStatusType(type);
+  }
+
+  function setSecretRewardStatus(type) {
+    statusNode.textContent = "";
+
+    const link = document.createElement("a");
+    link.className = "btn btn-primary";
+    link.href = SECRET_REWARD_URL;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = SECRET_REWARD_LABEL[lang()] || SECRET_REWARD_LABEL.en;
+
+    statusNode.appendChild(link);
+    applyStatusType(type);
+  }
+
+  function hasSecretRoleAccess(roleTitle) {
+    return typeof roleTitle === "string" && roleTitle.toLowerCase().includes(SECRET_ROLE_TRIGGER);
   }
 
   function setLoading(isLoading) {
@@ -563,6 +591,7 @@
     }
 
     const roleTitle = typeof answers.role_in_cinema === "string" ? answers.role_in_cinema : "";
+    const shouldShowSecretReward = hasSecretRoleAccess(roleTitle);
 
     const payload = {
       responseId: generateResponseId(),
@@ -580,12 +609,24 @@
     try {
       const result = await saveResponse(payload);
 
+      let statusMessage = ui[lang()].successRemote;
+      let statusType = "success";
+
       if (result.mode === "remote") {
-        setStatus(ui[lang()].successRemote, "success");
+        statusMessage = ui[lang()].successRemote;
+        statusType = "success";
       } else if (result.mode === "fallback") {
-        setStatus(ui[lang()].successFallback, "info");
+        statusMessage = ui[lang()].successFallback;
+        statusType = "info";
       } else {
-        setStatus(ui[lang()].successLocal, "info");
+        statusMessage = ui[lang()].successLocal;
+        statusType = "info";
+      }
+
+      if (shouldShowSecretReward) {
+        setSecretRewardStatus(statusType);
+      } else {
+        setStatus(statusMessage, statusType);
       }
 
       resetFormState();
