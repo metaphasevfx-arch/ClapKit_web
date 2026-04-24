@@ -3,7 +3,7 @@
 
   const LOCAL_RESULTS_KEY = "clapkit-crew-survey-responses-v1";
   const SECRET_ROLE_TRIGGER = "tim_roho";
-  const SECRET_REWARD_URL = "https://drive.google.com/file/d/1TF3RKaxgYOTrl5okb9adSmFBhkG_BM2B/view?usp=share_link";
+  const SECRET_REWARD_URL = "https://drive.google.com/file/d/1b0w_m46zy1H1DP9L7sayAtvx1T2kHQTr/view?usp=share_link";
   const SECRET_REWARD_LABEL = {
     ru: "то что ты хотел",
     en: "то что ты хотел"
