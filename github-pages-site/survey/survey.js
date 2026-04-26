@@ -2,12 +2,6 @@
   "use strict";
 
   const LOCAL_RESULTS_KEY = "clapkit-crew-survey-responses-v1";
-  const SECRET_ROLE_TRIGGER = "tim_roho";
-  const SECRET_REWARD_URL = "https://drive.google.com/file/d/1b0w_m46zy1H1DP9L7sayAtvx1T2kHQTr/view?usp=share_link";
-  const SECRET_REWARD_LABEL = {
-    ru: "то что ты хотел",
-    en: "то что ты хотел"
-  };
 
   const ui = {
     ru: {
@@ -199,24 +193,6 @@
   function setStatus(message, type) {
     statusNode.textContent = message;
     applyStatusType(type);
-  }
-
-  function setSecretRewardStatus(type) {
-    statusNode.textContent = "";
-
-    const link = document.createElement("a");
-    link.className = "btn btn-primary";
-    link.href = SECRET_REWARD_URL;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = SECRET_REWARD_LABEL[lang()] || SECRET_REWARD_LABEL.en;
-
-    statusNode.appendChild(link);
-    applyStatusType(type);
-  }
-
-  function hasSecretRoleAccess(roleTitle) {
-    return typeof roleTitle === "string" && roleTitle.toLowerCase().includes(SECRET_ROLE_TRIGGER);
   }
 
   function setLoading(isLoading) {
@@ -591,8 +567,6 @@
     }
 
     const roleTitle = typeof answers.role_in_cinema === "string" ? answers.role_in_cinema : "";
-    const shouldShowSecretReward = hasSecretRoleAccess(roleTitle);
-
     const payload = {
       responseId: generateResponseId(),
       submittedAt: new Date().toISOString(),
@@ -622,12 +596,7 @@
         statusMessage = ui[lang()].successLocal;
         statusType = "info";
       }
-
-      if (shouldShowSecretReward) {
-        setSecretRewardStatus(statusType);
-      } else {
-        setStatus(statusMessage, statusType);
-      }
+      setStatus(statusMessage, statusType);
 
       resetFormState();
       renderStorageMode();
